@@ -1,3 +1,6 @@
 # openAPI
 
-https://docs.google.com/document/d/1ei_hCMG1nnzpTCMLl7tJueVkXvrEvrc5bBDURYNQwU4/edit
+https://docs.google.com/document/d/1ei_hCMG1nnzpTCMLl7tJueVkXvrEvrc5bBDURYNQwU4
+
+#swaggerhub
+https://app.swaggerhub.com/apis/punyashlokam/openapicourse/1.0.0
