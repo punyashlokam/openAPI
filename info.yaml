@@ -1,0 +1,14 @@
+openapi: 3.0.3
+info:
+  version: '1.0.0'
+  title: 'OpenAPI course'
+  description: 'Specification for OpenAPI course'
+  termsOfService: http://example.com/terms/
+  contact:
+    name: punyam
+    url: https://github.com/punyashlokam
+    email: punyam1992@yahoo.com
+  license:
+    name: Apache 2.0
+    url: https://www.apache.org/licenses/LICENSE-2.0.html
+paths: {}
