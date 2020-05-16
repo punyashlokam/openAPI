@@ -1,0 +1,101 @@
+openapi: 3.0.3
+info:
+  version: '1.0.0'
+  title: 'OpenAPI course'
+  description: 'Specification for OpenAPI course'
+  termsOfService: http://example.com/terms/
+  contact:
+    name: punyam
+    url: https://github.com/punyashlokam
+    email: punyam1992@yahoo.com
+  license:
+    name: Apache 2.0
+    url: https://www.apache.org/licenses/LICENSE-2.0.html
+servers:
+  - url: https://development.server.com/v1
+    description: Development server
+  - url: https://qa.example.com
+    description: QA server
+  - url: https://staging.server.com/v1
+    description: Staging server
+  - url: https://api.gserver.com/v1
+    description: Production server
+  - url: https://production.example.com
+    description: QA server
+paths:
+  /v1/students:
+    get:
+      responses:
+        '200' :
+          description: List of Students
+        '404' :
+          description: Not Found
+        '500':
+          description: Internal Server Error
+          
+  /v1/getAllStudents :
+    get:
+      responses:
+        '200' :
+          description: List of Students
+        '404' :
+          description: Not Found
+        '500':
+          description: Internal Server Error
+      deprecated: true
+  
+          
+  /v1/addStudents :
+    put:
+      responses:
+        '200' :
+          description: Add Students
+        '404' :
+          description: Not Found
+        '500':
+          description: Internal Server Error
+          
+          
+  /v1/removeStudent :
+    delete:
+      responses:
+        '200' :
+          description: remove Student
+        '404' :
+          description: Not Found
+        '500':
+          description: Internal Server Error
+      parameters:
+        - in: path
+          name: studentId
+          required: true
+          description: Numeric ID of the student to remove.
+          content:
+            application/json:
+              examples:
+                id :
+                  value: 1
+                  
+  /v1/removeStudents :
+    post:
+      responses:
+        '200' :
+          description: remove Student
+        '404' :
+          description: Not Found
+        '500':
+          description: Internal Server Error
+      requestBody:
+         description: Numeric IDs of the students to remove.
+         content:
+           application/json:
+            schema:
+              $ref: '#/components/schemas/studentIds'
+                      
+                  
+components:
+  schemas:
+    studentIds:
+       type: number
+       example: '[1,2,3]'
+       
